@@ -65,7 +65,15 @@ HTTP::Client.new(URI.parse(URL)) do |client|
             structures << tag.node.children[0].to_s[1..-2].split(" ← ")
         end
         Crystagiri::HTML.new(res.body).css("#dictionary-search-results > ul > li > ul > li") do |tag|
-            defs << tag.node.children[0].to_s
+            d = ""
+            tag.node.children.each do |child|
+                if child.children.size > 0
+                    d += child.children[0].to_s
+                else
+                    d += child.to_s
+                end
+            end
+            defs << d
         end
 
         if defs.size == 0
