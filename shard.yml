@@ -1,0 +1,6 @@
+name: tradukilo
+version: 0.1.0
+
+dependencies:
+  crystagiri:
+    github: madeindjs/crystagiri

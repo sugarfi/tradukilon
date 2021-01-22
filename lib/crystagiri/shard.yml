@@ -1,0 +1,10 @@
+name: crystagiri
+version: 0.3.4
+
+authors:
+  - Alexandre Rousseau <contact@rousseau-alexandre.fr>
+  - prutheus <mail@prutheus.com>
+
+crystal: 0.20.1
+
+license: MIT
